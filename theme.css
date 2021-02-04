@@ -1,0 +1,72 @@
+/*全局*/
+html{
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+/*卡片*/
+.card{
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(50,50,93,.1),0 5px 8px rgba(0,0,0,.07) !important;
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: box-shadow .15s ease;
+    transition: opacity 1s ease;
+}
+.card:hover{
+    box-shadow: 0 10px 30px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07)!important;
+}
+/*按钮*/
+.btn{
+    outline: none;
+    border: none;
+    transition: all .15s ease;
+    letter-spacing: .2rem;
+    height: 12.5vmin;
+    padding: 4vmin;
+    margin: 2vmin;
+    font-size: 1.5vmin;
+    border-radius: 6.25vmin;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+}
+.btn:hover{
+    transform: translateY(-5%);
+    box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0, 3px, 6px, rgba(0, 0, 0, .08);
+}
+/*动画*/
+.fde-in
+{
+    animation: fade-in 2s ease;
+}
+.fde{
+    opacity: 0;
+}
+@keyframes fade-in
+{
+    0%{
+        opacity: 0;
+        transform: translate3d(-100%, 0, -100%);
+    }
+    100%{
+        opacity: 100% !important;
+    }
+}
+@keyframes change
+{
+    40%{
+        opacity: 0;
+        transform: translateX(200%);
+    }
+    60%{
+        transform: translateX(-400%);
+    }
+    100%{
+        opacity: 1;
+    }
+}
