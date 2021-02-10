@@ -1,5 +1,5 @@
 let PictureRank = 0;
-let TotalPictures = 6;
+let TotalPictures = 5;
 function End()
 {
     document.getElementById("start").classList.add("fde");
@@ -8,7 +8,7 @@ function End()
 function Add()
 {
     if(PictureRank == 0){
-        document.getElementById("nxt-page").style.visibility = "visible"
+        document.getElementById("nxt-page").style.visibility = "visible";
         document.getElementById("bdy").innerHTML += "<div id=\"main\" class=\"card fde-in\"></div>";
         PictureRank += 1;
     }
