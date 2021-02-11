@@ -1,0 +1,90 @@
+html{
+    background-image: linear-gradient(37deg, #ff0844 0%, #ffb199 100%);
+}
+.hover .flipper,.main:hover .flipper{
+    transform: rotateY(180deg);
+}
+.hover .back .main:hover .back{
+    z-index: 3;
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.card{
+    background-color: transparent;
+    border-radius: 15px;
+    position: absolute;
+}
+.shadow{
+    transition: box-shadow .15s ease;
+    box-shadow: 0 5px 15px rgba(50,50,93,.1),0 5px 8px rgba(0,0,0,.07) !important;
+}
+.letter-front{
+    transition: transform 2s;
+    transform-origin: top;
+    z-index: 5;
+    height: calc(6vmin * 9);
+    width: calc(6vmin * 16);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("/38e3d2887e81f8caf5007f94b9a4e65d/letter-front.svg");
+}
+.letter{
+    transition: opacity 2s;
+    z-index: 4;
+    height: calc(6vmin * 9);
+    width: calc(6vmin * 16);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("/38e3d2887e81f8caf5007f94b9a4e65d/letter-side.svg");
+}
+.flipper{
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+.main, .front, .back{
+    height: calc(6vmin * 9);
+    width: calc(6vmin * 16);
+}
+.front, .back{
+    border-radius: 15px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.front{
+    background-image: url("/38e3d2887e81f8caf5007f94b9a4e65d/img/1.png");
+    z-index: 2;
+}
+.back{
+    background-image: url("/38e3d2887e81f8caf5007f94b9a4e65d/img/2.png");
+    transform: rotateY(180deg);
+}
+.main{
+    background-color: white;
+}
+.fde{
+    opacity: 0;
+}
+.btn{
+    background-color: #ff0844;
+    z-index: 6;
+    width: 10vmin;
+    padding: 5vmin 0vmin;
+    outline: none;
+    border: none;
+    transition: all .15s ease;
+    letter-spacing: .2rem;
+    font-size: 1.5vmin;
+    text-align: center;
+    border-radius: 5vmin;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+}
