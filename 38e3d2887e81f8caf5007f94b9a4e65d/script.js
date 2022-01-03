@@ -1,20 +1,24 @@
-function rotate() {
-    document.getElementById("btn").style.zIndex = "-1";
-    document.getElementById("rotate-pic").style.transform = "translate(-50%, -50%) rotateX(-0.5turn)"
-    setTimeout(fde, 2000);
+let PictureRank = 0;
+let TotalPictures = 3;
+function End()
+{
+    document.getElementById("start").classList.add("fde");
+    setTimeout(Add, 1000);
 }
-function fde() {
-    document.getElementById("rotate-pic").style.visibility = "hidden";
-    document.getElementById("pic").classList.toggle('fde');
-    setTimeout(down, 2000);
-}
-function down() {
-    document.getElementById("pic").style.zIndex = "-1";
-}
-function change() {
-    document.getElementById("container").classList.toggle('hover');
-    setTimeout(hide, 2000);   
-}
-function hide() {
-    document.getElementsByClassName("front")[0].style.visibility = "hidden";
+function Add()
+{
+    if(PictureRank == 0){
+        document.getElementById("nxt-page").style.visibility = "visible"
+        document.getElementById("bdy").innerHTML += "<div id=\"main\" class=\"card fde-in\"></div>";
+        PictureRank += 1;
+    }
+    else{
+        if(PictureRank < TotalPictures) {
+            PictureRank += 1;
+            document.getElementById("main").style.backgroundImage = `url(/38e3d2887e81f8caf5007f94b9a4e65d/img/${PictureRank}.png)`;
+            if(PictureRank == TotalPictures) {
+                document.getElementById("nxt-page").style.visibility = "hidden";
+            }
+        }
+    }
 }

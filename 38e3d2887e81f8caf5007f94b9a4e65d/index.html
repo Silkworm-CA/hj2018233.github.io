@@ -1,20 +1,21 @@
+<!DOCTYPE html>
 <html>
+    <!--for zjt-->
     <head>
-        <title></title>
+        <title>一份元旦贺卡</title>
+        <link rel="stylesheet" href="/theme.css">
         <link rel="stylesheet" href="/38e3d2887e81f8caf5007f94b9a4e65d/style.css">
         <script src="/38e3d2887e81f8caf5007f94b9a4e65d/script.js"></script>
     </head>
     <body id="bdy">
-        <div class="btn center" id="btn" onclick="rotate()">打开</div>    
-        <div class="card center letter-front" id="rotate-pic"></div>
-        <div class="card center letter" id="pic"></div>
-        <div class="main center card" id="container" ontouchstart="change()">    
-            <div class="flipper">
-            <div class="front">
-            </div>
-            <div class="back">
-            </div>
+        <div id="start" class="card">
+            <div class="left"><p>你</p><p>收到了</p><p>一张元旦贺卡</p></div>
+            <div class="right">
+                <button class="btn" onclick="End()"><b>A:</b>给我康康？</button>
+                <button class="btn" onclick="End()"><b>B:</b>我觉得A说得很对</button>
+                <button class="btn"><b>C:</b>不看不看,王八下蛋</button>
+               </div>
         </div>
-    </div>
+        <button class="btn" onclick="Add()" id="nxt-page">下一页</button>
     </body>
 </html>
